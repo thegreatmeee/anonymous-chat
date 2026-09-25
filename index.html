@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Free anonymous global chat — talk to strangers worldwide in real-time." />
+<meta name="theme-color" content="#0f172a" />
+<title>ChatSphere — Anonymous Global Chat</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>" />
+</head>
+<body>
+
+<!-- LANDING / JOIN SCREEN -->
+<div id="joinScreen" class="screen active">
+  <div class="join-card">
+    <div class="logo">💬</div>
+    <h1>ChatSphere</h1>
+    <p class="tagline">Talk to strangers. Stay anonymous. Be kind.</p>
+
+    <div class="room-picker">
+      <label>Pick a room</label>
+      <div class="room-grid" id="roomGrid">
+        <button class="room-btn" data-room="global">🌍 Global</button>
+        <button class="room-btn" data-room="chill">☕ Chill</button>
+        <button class="room-btn" data-room="gaming">🎮 Gaming</button>
+        <button class="room-btn" data-room="music">🎵 Music</button>
+        <button class="room-btn" data-room="tech">💻 Tech</button>
+        <button class="room-btn" data-room="random">🎲 Random</button>
+      </div>
+    </div>
+
+    <button id="joinBtn" class="primary-btn" disabled>Enter Chat</button>
+    <p class="rules">⚠️ No spam, no hate, no personal info. 13+ only.</p>
+  </div>
+</div>
+
+<!-- CHAT SCREEN -->
+<div id="chatScreen" class="screen">
+  <header class="chat-header">
+    <div class="header-left">
+      <button id="backBtn" class="icon-btn" title="Leave room">←</button>
+      <div>
+        <h2 id="roomTitle">Global</h2>
+        <span class="online-count"><span id="onlineDot"></span> <span id="onlineCount">0</span> online</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="my-name" id="myName"></span>
+      <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="chat-main">
+    <div id="messages" class="messages"></div>
+    <div id="typingIndicator" class="typing-indicator hidden">
+      <span>Someone is typing</span><span class="dots"></span>
+    </div>
+  </main>
+
+  <footer class="chat-footer">
+    <div class="input-wrap">
+      <textarea id="msgInput" placeholder="Type a message..." maxlength="500" rows="1"></textarea>
+      <button id="sendBtn" class="send-btn" title="Send">➤</button>
+    </div>
+    <div class="footer-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</div>
+  </footer>
+</div>
+
+<!-- Firebase SDK (compat for simplicity) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
