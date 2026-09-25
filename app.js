@@ -4,13 +4,13 @@
 
 /* ---------- 🔑 PASTE YOUR FIREBASE CONFIG HERE ---------- */
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "1:XXXX:web:XXXX"
+  apiKey: "AIzaSyBydGt9IMcf7OOgl7GZZ9Zo26esNZKlBGU",
+  authDomain: "anonymous-chat-5c18c.firebaseapp.com",
+  databaseURL: "https://anonymous-chat-5c18c-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "anonymous-chat-5c18c",
+  storageBucket: "anonymous-chat-5c18c.firebasestorage.app",
+  messagingSenderId: "147858771968",
+  appId: ""1:147858771968:web:4b315cf05e4d15343448e5""
 };
 /* -------------------------------------------------------- */
 
